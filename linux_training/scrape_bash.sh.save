@@ -1,0 +1,42 @@
+#!/usr/bin/env bash
+#web scraping quotes website
+ 
+if [ $# -ne 1 ]; then
+	echo "usage $(basename $0) 'Athor name'"
+	exit -1
+
+fi
+
+curl=$(which curl)
+outfile="output.txt"
+#name=$(echo $1 | tr ' ' '+')
+url="https://quotes.toscrape.com/page/$1/"
+echo $url
+
+function dump_webpage(){
+	curl -o outfile $url
+
+}
+
+# usage / mode d'emploi du script
+usage="download_site.sh\n\
+\t-a no download - just process what's in the directory\n\
+\t-d [date] (default today)\n\
+\t-h help\n\
+\t-r retrieve only, do not download the detailed adds\n\
+\t-x debug mode - verbose ligne par ligne\n\
+\t-y mode TEST telecharge 2 pages seulement \n\
+\t-z nom du site - optionnel juste utile pour savoir ce qui tourne lorsqu'on fait "ps"
+#clean the webpage
+#function strip_html(){
+
+#}
+
+# checking for errors
+#function check_errors(){
+#	[ $? -ne 0] && echo "Error downloading page ..." && exit -1
+#}
+
+exit -1
+
+

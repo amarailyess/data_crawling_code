@@ -1,0 +1,20 @@
+	# profile gawk, créé Tue Nov  8 12:08:09 2022
+
+	# Bloc(s) BEGIN
+
+	BEGIN {
+     1  	printf "---|Header|--\n"
+	}
+
+	# Règle(s)
+
+     5  {
+     5  	print $0
+	}
+
+	# Bloc(s) END
+
+	END {
+     1  	printf "---|Footer|---\n"
+	}
+

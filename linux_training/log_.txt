@@ -1,0 +1,1 @@
+usage scrape_bash.sh 'Athor name'

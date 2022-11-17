@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#web scraping quotes website 
+if [ $# -e 1 ]; then
+	echo "usage $(basename $0) 'Athor name'"
+	exit -1
+
+fi
+
+#curl=$(which curl)
+
+cu=curl 'https://quotes.toscrape.com/'
+echo $cu
+
+exit -1
+
+
